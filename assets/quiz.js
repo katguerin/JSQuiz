@@ -33,7 +33,41 @@ function AITest(event) {
         setTimeout(function(){
             document.getElementById("questionOne").className = "hidden";
             document.getElementById("questionTwo").classList.remove("hidden");
-        }, 5000);
+        }, 2000);
+    }
+
+    console.log(event.target.id);
+    if (answered == false){
+        if (event.target.id == "AI2") {
+          score++;
+            document.getElementById("AI-answer").textContent = "CORRECT!";
+        }
+        else {
+           seconds = seconds - 5;
+           document.getElementById("AI-answer").textContent = "WRONG! YOU LOSE 5 seconds!";
+        }
+        answered = true;
+        setTimeout(function(){
+            document.getElementById("questionTwo").className = "hidden";
+            document.getElementById("questionThree").classList.remove("hidden");
+        }, 2000);
+    }
+    
+    console.log(event.target.id);
+    if (answered == false){
+        if (event.target.id == "AI1") {
+          score++;
+            document.getElementById("AI-answer").textContent = "CORRECT!";
+        }
+        else {
+           seconds = seconds - 5;
+           document.getElementById("AI-answer").textContent = "WRONG! YOU LOSE 5 seconds!";
+        }
+        answered = true;
+        setTimeout(function(){
+            document.getElementById("questionThree").className = "hidden";
+            document.getElementById("questionTwo").classList.remove("hidden");
+        }, 2000);
     }
 }
 
