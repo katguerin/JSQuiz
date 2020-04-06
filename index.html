@@ -51,11 +51,11 @@ THEN I can save my initials and score -->
                         <h2>Who plays the T-1000?</h2>   
                     </div>
                     <div class="card-body">
-                        <button id="AI1">Edward Furlong</button><br>
-                        <button id="AI2">Robert Patrick</button><br>
-                        <button id="AI3">Arnold Schwarzenegger</button><br>
+                        <button id="AI4">Edward Furlong</button><br>
+                        <button id="AI5">Robert Patrick</button><br>
+                        <button id="AI6">Arnold Schwarzenegger</button><br>
                     </div>
-                    <div class="card-answer" id="AI-answer">
+                    <div class="card-answer" id="AI2-answer">
                         <hr /> 
                     </div>
                 </div>
@@ -64,17 +64,38 @@ THEN I can save my initials and score -->
             <section class="wrapper hidden" id="questionThree">
                 <div class="card">
                     <div class="card-header">
-                        <h2>Is T2 the best of the Terminator franchise?</h2>   
+                        <h2>Is T2 the best of the Terminator universe?</h2>   
                     </div>
                     <div class="card-body">
-                        <button id="AI1">Obviously.</button><br>
-                        <button id="AI2">I really enjoy the first one.</button><br>
-                        <button id="AI3">What about the Sarah Connor Chronicles?</button><br>
+                        <button id="AI7">Obviously.</button><br>
+                        <button id="AI8">I really enjoy the first one.</button><br>
+                        <button id="AI9">What about the Sarah Connor Chronicles?</button><br>
                     </div>
-                    <div class="card-answer" id="AI-answer">
+                    <div class="card-answer" id="AI3-answer">
                         <hr /> 
                     </div>
                 </div>
+            </section>
+
+            <section class="wrapper hidden" id="endOfTest">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>All Done!</h2>
+                        <p>Your final score is <span id="finalScore"></span></p>
+                        <p><label>Enter Initials </label><input id="initials" type="text" /><input type="submit" id="submitInitials" /></p>
+            
+                    </div>
+                </div>    
+            </section>
+
+            <section class="wrapper hidden" id="scoreBoard">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>High Scores</h2>
+                        <div id="highScores"></div>
+
+                    </div>
+                </div>    
             </section>
 <script src="./assets/quiz.js"></script>
 
