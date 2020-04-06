@@ -1,6 +1,4 @@
 <!-- 
-WHEN I click the start button
-THEN I am presented with a question
 WHEN I answer a question
 THEN I am presented with another question
 WHEN I answer a question incorrectly
@@ -16,17 +14,17 @@ THEN I can save my initials and score -->
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-            <title>JavaScript Test!</title>
+            <title>Terminator JS Test!</title>
             <link rel="stylesheet" href="./assets/quiz.css">
+
+            <h3 class="float-left">View high scores</h3> 
+            <h3 class="float-right">Time: <span id="timer">90</span></h3>
         </head>
 
         <body>   
-           <h3 class="float-left">View high scores</h3> 
-           <h3 class="float-right">Time: <span id="timer">10</span></h3>
-            
            <section class="wrapper" id="start">
                 <header>
-                <h1>JavaScript Test!</h1>
+                <h1>Terminator JS Test!</h1>
                 </header>  
                 
                 <button class="btn" id="startTestBtn">Start Test</button>
@@ -35,7 +33,15 @@ THEN I can save my initials and score -->
             <section class="hidden" id="questionOne">
                 <div class="card">
                     <div class="card-header">
-                        <h2>insert questions</h2>   
+                        <h2>What is the name of the company that created the Terminator AI?</h2>   
+                    </div>
+                    <div class="card-body">
+                        <button id="AI1">Cyborg Systems</button><br>
+                        <button id="AI2">Cyberdyne Systems</button><br>
+                        <button id="AI3">International Business Machines</button><br>
+                    </div>
+                    <div class="card-answer" id="AI-answer">
+                        <hr /> 
                     </div>
                 </div>
             </section>
