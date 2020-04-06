@@ -15,6 +15,11 @@ function myCountDown() {
     document.getElementById("timer").textContent = seconds;
     if (seconds<=0){
         clearInterval(countDown);
+        document.getElementById("questionOne").className = "hidden";
+        document.getElementById("questionTwo").className = "hidden";
+        document.getElementById("questionThree").className = "hidden";
+        document.getElementById("finalScore").textContent = score;
+        document.getElementById("endOfTest").classList.remove("hidden");
     }
 }
 
