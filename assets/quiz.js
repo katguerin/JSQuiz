@@ -37,7 +37,6 @@ function AITest(event) {
     }
 }
 
-
 buttonEl.addEventListener("click", myCountDown); 
 document.getElementById("AI1").addEventListener("click", AITest);
 document.getElementById("AI2").addEventListener("click", AITest);
