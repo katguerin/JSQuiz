@@ -7,7 +7,7 @@ var scoreBoard = 0;
 
 function myCountDown() {
     if (countDown==null) {
-        countDown = setInterval(myCountDown, 1000);
+        countDown = setInterval(myCountDown, 1500);
         document.getElementById("start").className = "hidden";
         document.getElementById("questionOne").classList.remove("hidden");
     }
@@ -24,10 +24,10 @@ function myCountDown() {
 }
 
 function resetGame() {
+    clearInterval(countDown);
     score = 0;
     answered = false;
     countDown = null;
-    clearInterval(countDown);
     seconds = 90;
     document.getElementById("timer").textContent = "90";
     document.getElementById("questionOne").className = "hidden";
@@ -40,7 +40,7 @@ function resetGame() {
 }
 
 function AITest(event) {
-    console.log(event.target.id);
+    //console.log(event.target.id);
     if (answered == false){
         if (event.target.id == "AI2") {
           score++;
@@ -121,12 +121,11 @@ document.getElementById("AI1").addEventListener("click", AITest);
 document.getElementById("AI2").addEventListener("click", AITest);
 document.getElementById("AI3").addEventListener("click", AITest);
 
-buttonEl.addEventListener("click", myCountDown); 
 document.getElementById("AI4").addEventListener("click", AITest2);
 document.getElementById("AI5").addEventListener("click", AITest2);
 document.getElementById("AI6").addEventListener("click", AITest2);
 
-buttonEl.addEventListener("click", myCountDown); 
+
 document.getElementById("AI7").addEventListener("click", AITest3);
 document.getElementById("AI8").addEventListener("click", AITest3);
 document.getElementById("AI9").addEventListener("click", AITest3);
