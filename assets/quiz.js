@@ -23,6 +23,22 @@ function myCountDown() {
     }
 }
 
+function resetGame() {
+    score = 0;
+    answered = false;
+    countDown = null;
+    clearInterval(countDown);
+    seconds = 90;
+    document.getElementById("timer").textContent = "90";
+    document.getElementById("questionOne").className = "hidden";
+    document.getElementById("questionTwo").className = "hidden";
+    document.getElementById("questionThree").className = "hidden";
+    document.getElementById("finalScore").textContent = "0";
+    document.getElementById("start").classList.remove("hidden");
+    document.getElementById("endOfTest").className = "hidden";
+    document.getElementById("scoreBoard").className = "hidden";
+}
+
 function AITest(event) {
     console.log(event.target.id);
     if (answered == false){
@@ -99,6 +115,7 @@ function endOfTest(event) {
 }
 
 
+
 buttonEl.addEventListener("click", myCountDown); 
 document.getElementById("AI1").addEventListener("click", AITest);
 document.getElementById("AI2").addEventListener("click", AITest);
@@ -115,3 +132,4 @@ document.getElementById("AI8").addEventListener("click", AITest3);
 document.getElementById("AI9").addEventListener("click", AITest3);
 
 document.getElementById("submitInitials").addEventListener("click", endOfTest);
+document.getElementById("reset").addEventListener("click", resetGame);
